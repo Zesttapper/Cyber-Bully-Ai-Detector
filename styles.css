@@ -1,0 +1,63 @@
+.cyber-toxic {
+  background-color: rgba(255, 0, 0, 0.4);
+  border-radius: 3px;
+  padding: 0 2px;
+  box-shadow: 0 0 3px rgba(255,0,0,0.5);
+  cursor: help;
+  transition: all 0.2s ease;
+}
+
+.cyber-toxic:hover {
+  background-color: rgba(255,0,0,0.6);
+  box-shadow: 0 0 6px rgba(255,0,0,0.9);
+}
+
+.toxic-word {
+  background-color: rgba(255, 100, 100, 0.3);
+  border-radius: 3px;
+  padding: 1px 2px;
+  position: relative;
+  cursor: help;
+  transition: background-color 0.2s;
+}
+
+.toxic-word:hover {
+  background-color: rgba(255, 100, 100, 0.5);
+}
+
+.toxic-word:hover::after {
+  content: attr(data-toxic-type);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10000;
+  border: 1px solid #555;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.toxic-word[data-toxic-type="Self-Harm"] {
+  background-color: rgba(255, 0, 0, 0.3);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+.toxic-word[data-toxic-type="Racial/Homophobic Slur"] {
+  background-color: rgba(139, 0, 0, 0.4);
+  border: 1px solid rgba(139, 0, 0, 0.6);
+}
+
+.toxic-word[data-toxic-type="Cyberbullying"] {
+  background-color: rgba(255, 165, 0, 0.3);
+  border: 1px solid rgba(255, 165, 0, 0.5);
+}
+
+.toxic-word[data-toxic-type="Insult"] {
+  background-color: rgba(255, 255, 0, 0.3);
+  border: 1px solid rgba(255, 255, 0, 0.5);
+}
