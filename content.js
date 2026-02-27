@@ -1019,7 +1019,7 @@ async function getAIScore(text) {
     return aiScoreCache.get(text);
   }
 
-  const API_KEY = "AIzaSyC1ZUp-6WDMpUnIiy9Rdbo63TfOcuooNaw";
+  const API_KEY = "Your Api Key";
   const url = `https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=${API_KEY}`;
 
   if (text.length > 1000) return 0;
@@ -1279,3 +1279,4 @@ chrome.runtime.onMessage.addListener((message) => {
   }
 });  
 })();
+
